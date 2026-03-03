@@ -27,7 +27,7 @@ Image of the nutcracker. Given advice to find size of macademia nut, average hum
 3. Average human grip strength:
    - Approx. 30 kg total grip  
    - Per handle (assuming symmetry):
-     $ F_h = \frac{30}{2} = 15 \text{ kg}$
+     $F_h = \frac{30}{2} = 15 \text{ kg}$
 
    - Converting to Newtons:
 
