@@ -27,24 +27,17 @@ Image of the nutcracker. Given advice to find size of macademia nut, average hum
 3. Average human grip strength:
    - Approx. 30 kg total grip  
    - Per handle (assuming symmetry):
-
-     $$
-     F_h = \frac{30}{2} = 15 \text{ kg}
-     $$
+     $ F_h = \frac{30}{2} = 15 \text{ kg}$
 
    - Converting to Newtons:
 
-     $$
-     F_h = 15(9.81) \approx 147 \text{ N}
-     $$
+     $F_h = 15(9.81) \approx 147 \text{ N}$
 
 4. Required cracking force for macadamia nut:
    - Estimated total compressive load $\approx 2000 \text{ N}$
    - Per jaw (assuming equal distribution):
 
-     $$
-     C = \frac{2000}{2} = 1000 \text{ N}
-     $$
+     $C = \frac{2000}{2} = 1000 \text{ N}$
 
 ### Moment Balance About Point A
 
