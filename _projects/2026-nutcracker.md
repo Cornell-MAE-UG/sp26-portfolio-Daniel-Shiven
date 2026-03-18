@@ -21,7 +21,7 @@ Image of the nutcracker. Given advice to find size of macademia nut, average hum
 2. Find average human grip strength
 3. Determine necessary load to crack a macademia nut
 4. Draw FBD of the nutcracker
-5. Determine summation of moments about point A (see free body diagram below) 
+5. Determine summation of moments about point A (see free body diagram in the image above) 
 
 ![Free Body Diagram](/assets/images/nutcracker_FBD.jpeg)
 
