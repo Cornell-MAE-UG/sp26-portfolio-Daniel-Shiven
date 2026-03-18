@@ -8,7 +8,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : Your Name
+title                    : Daniel
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : Your Name
@@ -17,7 +17,7 @@ baseurl                  : "/sp26-portfolio-Daniel-Shiven/" # Set this to your r
 
 # Theme and Style
 theme: jekyll-theme-minimal
-color_scheme: light # light/default, dark, or aqua
+color_scheme: aqua # light/default, dark, or aqua
 
 sass:
   style: compressed
