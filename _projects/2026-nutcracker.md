@@ -23,7 +23,7 @@ Image of the nutcracker. Given advice to find size of macademia nut, average hum
 4. Draw FBD of the nutcracker
 5. Determine summation of moments about point A (see free body diagram below) 
 
-![Free Body Diagram](../assets/images/nutcracker_FBD.jpeg)
+![Free Body Diagram](/assets/images/nutcracker_FBD.jpeg)
 
 ## Calculations and Assumptions
 1. Estimated nut diameter:
