@@ -1,3 +1,11 @@
+---
+layout: project
+title: Analysis of Functions
+description: Class project with Graphs
+technologies: [MATLAB, python]
+image: /assets/images/function-graph.png
+---
+
 ## Find
 Determine the key dimensions of a handheld nutcracker design—specifically:
 - Handle length / overall geometry
