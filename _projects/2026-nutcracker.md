@@ -67,10 +67,10 @@ d2 ≈ 136 mm
 
 ## Design Result
 
-- Distance from pin to nut contact: $d_1 \approx 20 \text{ mm}$
-- Required handle lever arm: $d_2 \approx 136 \text{ mm}$
-- Nut thickness accommodated: $h_1 \approx 10 \text{ mm}$
-- Estimated handle clearance: $h_2 \approx 10 \text{ cm}$
+- Distance from pin to nut contact: d1 ≈ 20 mm
+- Required handle lever arm: d2 ≈ 136 mm
+- Nut thickness accommodated: h1 ≈ 10 mm
+- Estimated handle clearance: h2 ≈ 10 cm
 
 Mechanical advantage:
 
