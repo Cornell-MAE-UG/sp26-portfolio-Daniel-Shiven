@@ -3,7 +3,7 @@ layout: project
 title: Nutcracker Project
 description: Statics Class Project
 technologies: n/a
-image: /assets/images/function-graph.png
+image: /assets/images/nutcracker_FBD.jpeg
 ---
 
 ## Find
