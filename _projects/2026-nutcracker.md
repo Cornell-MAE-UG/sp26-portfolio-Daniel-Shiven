@@ -27,53 +27,43 @@ Image of the nutcracker. Given advice to find size of macademia nut, average hum
 
 ## Calculations and Assumptions
 1. Estimated nut diameter:
-   - $h_1 \approx 10 \text{ mm}$
+   - h1 ≈ 10 mm
 
 2. Distance from pin to nut load location:
-   - $d_1 \approx 20 \text{ mm}$
+   - d1 ≈ 20 mm
 
 3. Average human grip strength:
    - Approx. 30 kg total grip  
    - Per handle (assuming symmetry):
-     $F_h = \frac{30}{2} = 15 \text{ kg}$
+     Fh = 30 / 2 = 15 kg
 
    - Converting to Newtons:
 
-     $F_h = 15(9.81) \approx 147 \text{ N}$
+     Fh = 15 x 9.81 ≈ 147 N
 
 4. Required cracking force for macadamia nut:
    - Estimated total compressive load $\approx 2000 \text{ N}$
    - Per jaw (assuming equal distribution):
 
-     $C = \frac{2000}{2} = 1000 \text{ N}$
+     C = 2000 / 2 = 1000 N
 
 ### Moment Balance About Point A
 
 Using the free body diagram and summing moments about the pin at point A:
 
-$$
-\sum M_A = 0
-$$
+Sum of moments about A = 0
 
-$$
-C(d_1) - F_h(d_2) = 0
-$$
+C(d1) - Fh(d2) = 0
 
-Solving for handle length $d_2$:
+Solving for handle length d2:
 
-$$
-d_2 = \frac{C d_1}{F_h}
-$$
+d2 = (C x d1) / Fh
 
 Substituting values:
 
-$$
-d_2 = \frac{1000(20 \text{ mm})}{147}
-$$
+d2 = (1000 x 20 mm) / 147
 
-$$
-d_2 \approx 136 \text{ mm}
-$$
+d2 ≈ 136 mm
 
 ## Design Result
 
@@ -84,9 +74,7 @@ $$
 
 Mechanical advantage:
 
-$$
-MA = \frac{d_2}{d_1} \approx \frac{136}{20} \approx 6.8
-$$
+MA = d2 / d1 ≈ 136 / 20 ≈ 6.8
 
 This means the user's applied grip force is amplified by nearly $7\times$ at the nut.
 
