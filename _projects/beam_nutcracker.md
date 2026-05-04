@@ -108,9 +108,7 @@ I = 640 mm⁴
 Elastic modulus:
 
 E = 69,000 N/mm²  
-
-Flexural rigidity:
-
+Therefore:
 EI = 69,000 × 640  
 EI = 44,160,000 N·mm²  
 
