@@ -7,81 +7,146 @@ image: /assets/images/beam_nutcracker.jpeg
 ---
 
 ## Find
-Determine the key dimensions of a handheld nutcracker design—specifically:
-- Handle length / overall geometry
-- Pin (hinge) location (lever arms)
-- Jaw location relative to the pin  
-such that a user can apply a realistic grip force and still crack a macadamia nut.
+Update the nutcracker design by replacing the user-applied grip force with a linear actuator and analyzing the handles as beams. Determine:
+- Required actuator force
+- Location of maximum elastic deflection
+- Beam design (cross-section and material) such that deflection is minimized and below 2% of handle length
 
 ## Given
-Image of the nutcracker. Given advice to find size of macademia nut, average human grip strength, and to determine necessary load to break a macademia nut.
+From the original nutcracker design:
+- Distance from pin to nut: d1 ≈ 20 mm
+- Handle length: d2 ≈ 136 mm
+- Required force per jaw: C = 1000 N
+- Required actuator force (from moment balance): Fa ≈ 147 N
 
-## Plan:
-1. Find nut size
-2. Find average human grip strength
-3. Determine necessary load to crack a macademia nut
-4. Draw FBD of the nutcracker
-5. Determine summation of moments about point A (see free body diagram in the image above) 
+## Assumptions
+- The handle is modeled as a beam with a fixed support at the hinge
+- Forces act only in the transverse (vertical) direction
+- Beam has constant cross-section
+- Material is linear elastic
+- Actuator applies force at the end of the handle
 
-![Free Body Diagram](/assets/images/nutcracker_FBD.jpeg)
+## Beam Model
 
-## Calculations and Assumptions
-1. Estimated nut diameter:
-   - h1 ≈ 10 mm
+Let:
+- L = 136 mm
+- a = 20 mm
+- Fa = 147 N (downward at x = L)
+- C = 1000 N (upward at x = a)
 
-2. Distance from pin to nut load location:
-   - d1 ≈ 20 mm
+The beam experiences two transverse point loads.
 
-3. Average human grip strength:
-   - Approx. 30 kg total grip  
-   - Per handle (assuming symmetry):
-     Fh = 30 / 2 = 15 kg
+## Bending Moment
 
-   - Converting to Newtons:
+For a cut at position x:
 
-     Fh = 15 x 9.81 ≈ 147 N
+For 0 ≤ x < 20 mm:
 
-4. Required cracking force for macadamia nut:
-   - Estimated total compressive load $\approx 2000 \text{ N}$
-   - Per jaw (assuming equal distribution):
+M(x) = Fa(L − x) − C(a − x)
 
-     C = 2000 / 2 = 1000 N
+For 20 ≤ x ≤ 136 mm:
 
-### Moment Balance About Point A
+M(x) = Fa(L − x)
 
-Using the free body diagram and summing moments about the pin at point A:
+## Elastic Curve Equation
 
-Sum of moments about A = 0
+EI (d²v/dx²) = M(x)
 
-C(d1) - Fh(d2) = 0
+So:
 
-Solving for handle length d2:
+For 0 ≤ x < 20:
 
-d2 = (C x d1) / Fh
+EI (d²v/dx²) = Fa(L − x) − C(a − x)
 
-Substituting values:
+For 20 ≤ x ≤ 136:
 
-d2 = (1000 x 20 mm) / 147
+EI (d²v/dx²) = Fa(L − x)
 
-d2 ≈ 136 mm
+## Maximum Deflection Location
 
-## Design Result
+The elastic curve is obtained by integrating the moment equation twice:
 
-- Distance from pin to nut contact: d1 ≈ 20 mm
-- Required handle lever arm: d2 ≈ 136 mm
-- Nut thickness accommodated: h1 ≈ 10 mm
-- Estimated handle clearance: h2 ≈ 10 cm
+EI (d²v/dx²) = M(x)  
+dv/dx = θ(x)  
+v(x) = deflection  
 
-Mechanical advantage:
+Since bending moment produces curvature, and curvature is integrated to obtain slope and then displacement, the total deflection accumulates along the beam length.
 
-MA = d2 / d1 ≈ 136 / 20 ≈ 6.8
+Although the internal bending moment is largest near the hinge, the slope continues to increase along the beam, leading to the largest displacement at the end of the beam.
 
-This means the user's applied grip force is amplified by nearly $7\times$ at the nut.
+Therefore, the maximum deflection occurs at:
 
-## Discussion on Usability
+x = L = 136 mm
 
-The calculated handle length of approximately 136 mm is within a comfortable handheld range for a typical adult user. The short jaw lever arm (20 mm) provides strong mechanical advantage but increases reaction forces at the pin, meaning the hinge should be made from a durable material to prevent wear or deformation over time.
+## Deflection Constraint
 
-The estimated 10 mm nut diameter fits within the jaw opening. However, manufacturing tolerances should allow slightly larger clearance to accommodate natural variation in nut sizes.
+The problem requires:
 
-Overall, the geometry appears physically realistic for a typical manual nutcracker.
+δ_max ≤ 0.02L
+
+δ_max ≤ 0.02(136)
+
+δ_max ≤ 2.72 mm
+
+## Beam Design
+
+Use a rectangular cross-section:
+
+I = (b h³) / 12
+
+Selected design:
+
+- Material: 6061 Aluminum  
+- Width: b = 15 mm  
+- Thickness: h = 8 mm  
+
+Moment of inertia:
+
+I = (15 × 8³) / 12  
+I = 640 mm⁴  
+
+Elastic modulus:
+
+E = 69,000 N/mm²  
+
+Flexural rigidity:
+
+EI = 69,000 × 640  
+EI = 44,160,000 N·mm²  
+
+Increasing thickness significantly improves stiffness due to the cubic dependence of h in the moment of inertia.
+
+## Actuator Selection
+
+Required actuator force:
+
+Fa = 147 N  
+
+Convert to pounds:
+
+Fa ≈ 33.1 lb  
+
+Selected actuator:
+- Progressive Automations PA-14 Mini Linear Actuator
+- Force rating: 150 lb
+
+Safety factor:
+
+SF = 150 / 33.1 ≈ 4.5  
+
+## Final Design
+
+- Handle length: 136 mm  
+- Distance to nut: 20 mm  
+- Material: 6061 Aluminum  
+- Cross-section: 15 mm × 8 mm  
+- Maximum allowable deflection: 2.72 mm  
+- Actuator: 150 lb PA-14  
+
+## Discussion
+
+The maximum deflection occurs at the end of the beam due to the cumulative effect of curvature along its length. The selected beam design ensures sufficient stiffness while minimizing material usage, with thickness being the dominant factor in reducing deflection.
+
+The actuator replaces the human grip force and provides sufficient load to achieve the required 1000 N compressive force at the nut. The selected actuator provides a large safety factor, ensuring reliable operation.
+
+Overall, the updated design maintains the original mechanical advantage while improving usability through automated force application.
